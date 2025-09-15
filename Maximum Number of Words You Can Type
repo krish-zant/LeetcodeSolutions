@@ -1,0 +1,11 @@
+class Solution:
+    def canBeTypedWords(self, text: str, brokenLetters: str) -> int:
+        l1= text.split()
+        leng=len(l1)
+        l2=list(brokenLetters)
+        for word in l1:
+            for char in l2:
+                if char in word:
+                    leng=leng-1
+                    break
+        return leng
